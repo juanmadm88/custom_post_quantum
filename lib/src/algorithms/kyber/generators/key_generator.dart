@@ -1,12 +1,12 @@
 import 'dart:typed_data';
 
-import 'package:post_quantum/src/core/factories/polynomial_factory.dart';
-import 'package:post_quantum/src/core/ntt/ntt_helper_kyber.dart';
-import 'package:post_quantum/src/core/primitives/prf.dart';
-import 'package:post_quantum/src/core/primitives/xof.dart';
+import 'package:custom_post_quantum/src/core/factories/polynomial_factory.dart';
+import 'package:custom_post_quantum/src/core/ntt/ntt_helper_kyber.dart';
+import 'package:custom_post_quantum/src/core/primitives/prf.dart';
+import 'package:custom_post_quantum/src/core/primitives/xof.dart';
 
-import 'package:post_quantum/src/core/polynomials/polynomial_ring.dart';
-import 'package:post_quantum/src/core/polynomials/polynomial_ring_matrix.dart';
+import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring.dart';
+import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring_matrix.dart';
 
 class KeyGenerator {
 

@@ -1,16 +1,16 @@
 import 'dart:typed_data';
 
 import 'package:hashlib/hashlib.dart';
-import 'package:post_quantum/src/core/observer/null_step_observer.dart';
-import 'package:post_quantum/src/core/observer/step_observer.dart';
+import 'package:custom_post_quantum/src/core/observer/null_step_observer.dart';
+import 'package:custom_post_quantum/src/core/observer/step_observer.dart';
 
 import '../abstractions/pke_cipher.dart';
 import '../abstractions/pke_private_key.dart';
 import '../abstractions/pke_public_key.dart';
 import '../generators/key_generator.dart';
 
-import 'package:post_quantum/src/core/polynomials/polynomial_ring.dart';
-import 'package:post_quantum/src/core/polynomials/polynomial_ring_matrix.dart';
+import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring.dart';
+import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring_matrix.dart';
 
 class KyberPKE {
 

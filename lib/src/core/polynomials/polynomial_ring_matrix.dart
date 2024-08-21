@@ -1,6 +1,6 @@
 import 'dart:typed_data';
 
-import 'package:post_quantum/src/core/ntt/ntt_helper.dart';
+import 'package:custom_post_quantum/src/core/ntt/ntt_helper.dart';
 
 import 'polynomial_ring.dart';
 

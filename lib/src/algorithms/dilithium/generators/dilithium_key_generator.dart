@@ -1,13 +1,13 @@
 import 'dart:typed_data';
 
-import 'package:post_quantum/src/algorithms/dilithium/primitives/prf.dart';
-import 'package:post_quantum/src/core/bit_packing/bit_packing_helper.dart';
-import 'package:post_quantum/src/core/factories/polynomial_factory.dart';
-import 'package:post_quantum/src/core/ntt/ntt_helper_dilithium.dart';
+import 'package:custom_post_quantum/src/algorithms/dilithium/primitives/prf.dart';
+import 'package:custom_post_quantum/src/core/bit_packing/bit_packing_helper.dart';
+import 'package:custom_post_quantum/src/core/factories/polynomial_factory.dart';
+import 'package:custom_post_quantum/src/core/ntt/ntt_helper_dilithium.dart';
 import 'package:hashlib/hashlib.dart';
 
-import 'package:post_quantum/src/core/polynomials/polynomial_ring.dart';
-import 'package:post_quantum/src/core/polynomials/polynomial_ring_matrix.dart';
+import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring.dart';
+import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring_matrix.dart';
 
 import '../primitives/xof.dart';
 

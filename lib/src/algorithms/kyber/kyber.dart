@@ -1,10 +1,10 @@
 import 'dart:typed_data';
 
-import 'package:post_quantum/src/algorithms/kyber/abstractions/kem_private_key.dart';
-import 'package:post_quantum/src/algorithms/kyber/abstractions/kem_public_key.dart';
+import 'package:custom_post_quantum/src/algorithms/kyber/abstractions/kem_private_key.dart';
+import 'package:custom_post_quantum/src/algorithms/kyber/abstractions/kem_public_key.dart';
 import 'package:hashlib/hashlib.dart';
-import 'package:post_quantum/src/core/observer/null_step_observer.dart';
-import 'package:post_quantum/src/core/observer/step_observer.dart';
+import 'package:custom_post_quantum/src/core/observer/null_step_observer.dart';
+import 'package:custom_post_quantum/src/core/observer/step_observer.dart';
 
 import 'abstractions/pke_cipher.dart';
 import 'kyber_pke/kyber_pke.dart';

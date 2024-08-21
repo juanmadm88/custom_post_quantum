@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:post_quantum/src/algorithms/kyber/abstractions/pke_public_key.dart';
+import 'package:custom_post_quantum/src/algorithms/kyber/abstractions/pke_public_key.dart';
 
 class KemPublicKey {
   final PKEPublicKey publicKey;

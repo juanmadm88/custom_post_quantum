@@ -1,5 +1,5 @@
-import 'package:post_quantum/src/core/ntt/ntt_helper.dart';
-import 'package:post_quantum/src/core/polynomials/polynomial_ring.dart';
+import 'package:custom_post_quantum/src/core/ntt/ntt_helper.dart';
+import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring.dart';
 
 class KyberNTTHelper implements NTTHelper{
   int q;

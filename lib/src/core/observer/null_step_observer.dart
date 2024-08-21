@@ -1,4 +1,4 @@
-import 'package:post_quantum/src/core/observer/step_observer.dart';
+import 'package:custom_post_quantum/src/core/observer/step_observer.dart';
 
 class NullStepObserver implements StepObserver {
   @override

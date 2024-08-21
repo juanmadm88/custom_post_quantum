@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
-import 'package:post_quantum/src/core/ntt/ntt_helper_dilithium.dart';
-import 'package:post_quantum/src/core/polynomials/polynomial_ring_matrix.dart';
+import 'package:custom_post_quantum/src/core/ntt/ntt_helper_dilithium.dart';
+import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring_matrix.dart';
 
 class DilithiumPublicKey {
   Uint8List rho;

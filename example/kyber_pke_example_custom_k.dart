@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:post_quantum/post_quantum.dart';
+import 'package:custom_post_quantum/post_quantum.dart';
 import 'dart:io';
 
 void main () async{

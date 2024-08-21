@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:custom_post_quantum/post_quantum.dart';
+import 'package:custom_post_quantum/custom_post_quantum.dart';
 import 'package:test/test.dart';
 
 

@@ -32,7 +32,8 @@ class PKECypher {
         dv = 5;
         break;
       default:
-        throw UnimplementedError("Unknown kyber security level.");
+        du = 10;
+        dv = 4;
     }
 
     var sizeU = (du * kyberVersion * 256 / 8).round();

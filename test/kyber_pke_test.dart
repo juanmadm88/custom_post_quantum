@@ -289,10 +289,13 @@ void main() {
       var originalMsg = base64Decode(testData["original_msg"]);
       var coins = base64Decode(testData["coins"]);
 
-      var (pk, _) = kyberCustom.generateKeys(seed);
+      var (pk, sk) = kyberCustom.generateKeys(seed);
       var deserializedCipher = PKECypher.deserialize(cipherBytes, 1);
       var generatedCipher = kyberCustom.encrypt(pk, originalMsg, coins);
 
+      var decryptedMssg = kyberCustom.decrypt(sk,deserializedCipher);
+
+      expect(decryptedMssg,originalMsg);
       expect(deserializedCipher, generatedCipher);
     });
 

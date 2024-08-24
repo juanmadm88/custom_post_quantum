@@ -270,6 +270,32 @@ void main() {
       File("test/test_data/kyber_pke/pregenerated_pke_custom_k.json").readAsStringSync()
     );
 
+     test('Deserialized keys are equal to generated keys', () {
+      var pkBytes = base64Decode(testData["pk"]);
+      var skBytes = base64Decode(testData["sk"]);
+      var seed = base64Decode(testData["seed"]);
+
+      var pk = PKEPublicKey.deserialize(pkBytes, 1);
+      var sk = PKEPrivateKey.deserialize(skBytes, 1);
+      var (genPk, genSk) = kyberCustom.generateKeys(seed);
+
+      expect(pk, genPk);
+      expect(sk, genSk);
+    });
+
+     test('Deserialized cipher is equal to generated one', () {
+      var seed = base64Decode(testData["seed"]);
+      var cipherBytes = base64Decode(testData["cipher"]);
+      var originalMsg = base64Decode(testData["original_msg"]);
+      var coins = base64Decode(testData["coins"]);
+
+      var (pk, _) = kyberCustom.generateKeys(seed);
+      var deserializedCipher = PKECypher.deserialize(cipherBytes, 1);
+      var generatedCipher = kyberCustom.encrypt(pk, originalMsg, coins);
+
+      expect(deserializedCipher, generatedCipher);
+    });
+
     test('Creating keys with given seed returns expected pre-generated keys', () {
       var seed = base64Decode(testData["seed"]!);
       var (pk, sk) = kyberCustom.generateKeys(seed);

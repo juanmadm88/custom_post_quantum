@@ -1,6 +1,6 @@
 name: custom_post_quantum
 description: "Dart implementation of NIST's post-quantum algorithm candidates, Kyber and Dilithium. which allows you to create Kyber with custom K"
-version: 1.0.0-prerelease.8
+version: 1.0.1-prerelease.8
 repository: https://github.com/juanmadm88/custom_post_quantum
 
 environment:

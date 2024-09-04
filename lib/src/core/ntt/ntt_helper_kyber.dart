@@ -50,7 +50,7 @@ class KyberNTTHelper implements NTTHelper{
   int montgomeryReduce(int a) {
     int u = (a*qInv) & montMask;
     int t = a + u*q;
-    t = t >> 16;
+    t = (t >> 16).toSigned(32);    
     if (t >= q) {
       t-=q;
     }

@@ -12,8 +12,8 @@ class BitPackingHelper {
 
     while (byteIndex < bytes.length) {
       numbers[numIndex] |= (
-          (bytes[byteIndex] >> (8 - bytesBitsLeft)) << (bitSize - numberBitsLeft)
-      ) & mask;
+          (bytes[byteIndex] >> (8 - bytesBitsLeft)).toSigned(32) << (bitSize - numberBitsLeft)
+      ).toSigned(32) & mask;
 
       int numberBitsUsed = numberBitsLeft > bytesBitsLeft ? bytesBitsLeft : numberBitsLeft;
       numberBitsLeft -= numberBitsUsed;
@@ -42,8 +42,8 @@ class BitPackingHelper {
 
     while (numIndex < numbers.length) {
       bytes[byteIndex] |= (
-          ( numbers[numIndex] >> (bitSize - numberBitsLeft) ) << (8 - bytesBitsLeft)
-      ) & 0xFF;
+          ( numbers[numIndex] >> (bitSize - numberBitsLeft) ).toSigned(32) << (8 - bytesBitsLeft)
+      ).toSigned(32) & 0xFF;
 
       int byteBitsUsed = numberBitsLeft > bytesBitsLeft ? bytesBitsLeft : numberBitsLeft;
       numberBitsLeft -= byteBitsUsed;

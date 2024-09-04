@@ -87,7 +87,7 @@ class PolynomialRing {
   /// [x]' still holds that [x]' mod [q] = [x] mod [q].
   int _reduceModulus(int x, int a) {
     int r = x % a;
-    if (r > (a >> 1)) r -= a;
+    if (r > (a >> 1).toSigned(32)) r -= a;
     return r;
   }
 
@@ -105,9 +105,9 @@ class PolynomialRing {
   bool _checkNormBound(int n, int bound, int q) {
     int x;
     x = n % q;
-    x = ((q - 1) >> 1) - x;
-    x = x ^ (x >> 31);
-    x = ((q - 1) >> 1) - x;
+    x = ((q - 1) >> 1).toSigned(32) - x;
+    x = x ^ (x >> 31).toSigned(32);
+    x = ((q - 1) >> 1).toSigned(32) - x;
     return x >= bound;
   }
 
@@ -328,7 +328,7 @@ class PolynomialRing {
     for (var r in coefficients){
       r = r % q;
       var r0 = _reduceModulus(r, power2);
-      p1Coefs.add((r - r0) >> d);
+      p1Coefs.add(((r - r0) >> d).toSigned(32));
       p0Coefs.add(r0);
     }
 

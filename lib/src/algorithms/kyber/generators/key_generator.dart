@@ -112,7 +112,7 @@ class KeyGenerator {
     while(true) {
       var bytes = stream.read(3);
       int num1 = bytes[0] + (256 * (bytes[1] % 16));
-      int num2 = (bytes[1] >> 4) + (16 * bytes[2]);
+      int num2 = (bytes[1] >> 4).toSigned(32) + (16 * bytes[2]);
 
       for (var num in [num1, num2]) {
         if (num >= q) continue;
@@ -168,7 +168,7 @@ class KeyGenerator {
     for (var byte in byteArray) {
       List<int> bits = [];
       for (var bit=0; bit<8; bit++) {
-        bits.add((byte >> bit) % 2);
+        bits.add((byte >> bit).toSigned(32) % 2);
       }
       bitArray.addAll(bits);
     }

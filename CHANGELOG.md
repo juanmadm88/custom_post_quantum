@@ -1,3 +1,3 @@
-## 1.0.0-prerelease.8
+## 1.0.2-prerelease.8
 
 - Fixed key deserialization error

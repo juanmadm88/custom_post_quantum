@@ -11,6 +11,7 @@ import 'package:custom_post_quantum/src/core/observer/step_observer.dart';
 import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring.dart';
 import 'package:custom_post_quantum/src/core/polynomials/polynomial_ring_matrix.dart';
 import 'package:hashlib/hashlib.dart';
+import 'package:hashlib/random.dart';
 
 class Dilithium {
 
